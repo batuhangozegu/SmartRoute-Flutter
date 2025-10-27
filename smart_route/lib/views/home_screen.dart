@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:smart_route/Compenents/custom_text_field.dart';
 import 'package:smart_route/Compenents/gradient_button.dart';
 import 'package:smart_route/Compenents/list_item_view.dart';
+import 'package:smart_route/views/create_route.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final _controller = TextEditingController();
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -39,7 +38,10 @@ class HomeScreen extends StatelessWidget {
                   gradientStartPoint: Alignment.centerLeft,
                   gradientEndPoint: Alignment.centerRight,
                   onTap: () {
-                    print("Tiklandı");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreateRoute()),
+                    );
                   },
                 ),
 
@@ -56,13 +58,6 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 16),
 
                 ListItemView(),
-
-                const SizedBox(height: 30),
-                CustomTextField(
-                  placeHolder: "Başlangıç Şehri",
-                  controller: _controller,
-                  icon: Icons.location_on,
-                ),
                 const Spacer(),
               ],
             ),
