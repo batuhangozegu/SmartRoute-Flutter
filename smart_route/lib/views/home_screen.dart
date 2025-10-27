@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_route/Compenents/custom_text_field.dart';
 import 'package:smart_route/Compenents/gradient_button.dart';
 import 'package:smart_route/Compenents/list_item_view.dart';
 
@@ -7,6 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _controller = TextEditingController();
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -55,6 +57,12 @@ class HomeScreen extends StatelessWidget {
 
                 ListItemView(),
 
+                const SizedBox(height: 30),
+                CustomTextField(
+                  placeHolder: "Başlangıç Şehri",
+                  controller: _controller,
+                  icon: Icons.location_on,
+                ),
                 const Spacer(),
               ],
             ),
