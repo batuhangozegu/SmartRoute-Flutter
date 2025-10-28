@@ -4,11 +4,13 @@ class CustomTextField extends StatelessWidget {
   final String placeHolder;
   final TextEditingController controller;
   final IconData? icon;
+  final Function(String)? onChanged;
 
   const CustomTextField({
     Key? key,
     required this.placeHolder,
     required this.controller,
+    this.onChanged,
     this.icon,
   }) : super(key: key);
 
@@ -16,10 +18,10 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.teal.shade300.withValues(alpha: 0.15),
+        color: Colors.teal.shade50,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: Colors.teal.shade400.withValues(alpha: 0.4),
+          color: Colors.teal.shade400.withValues(alpha: 0.2),
           width: 1.0,
         ),
         boxShadow: [
@@ -48,6 +50,7 @@ class CustomTextField extends StatelessWidget {
             Expanded(
               child: TextField(
                 controller: controller,
+                onChanged: onChanged,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
