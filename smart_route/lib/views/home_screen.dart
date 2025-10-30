@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_route/Compenents/gradient_button.dart';
 import 'package:smart_route/Compenents/list_item_view.dart';
+import 'package:smart_route/Compenents/stops_view_list_item.dart';
 import 'package:smart_route/views/create_route.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
         ),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(2),
             child: Column(
               children: [
                 GradientButton(
@@ -58,6 +59,16 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 16),
 
                 ListItemView(),
+
+                StopsViewListItem(
+                  placeName: "Deneme",
+                  placeCategory: "Deneme",
+                  rating: 4.2,
+                  placeIcon: "Icons.business",
+                  isSelected: true,
+                  onTap: () => print("deneme"),
+                ),
+
                 const Spacer(),
               ],
             ),
