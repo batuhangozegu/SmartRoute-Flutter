@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_route/Compenents/custom_text_field.dart';
 import 'package:smart_route/Compenents/gradient_button.dart';
 import 'package:smart_route/Compenents/map_place_holder.dart';
+import 'package:smart_route/views/select_stops_view.dart';
 
 class CreateRoute extends StatefulWidget {
   const CreateRoute({super.key});
@@ -42,8 +43,8 @@ class _CreateRouteState extends State<CreateRoute> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF40E0D0).withValues(alpha: 0.1),
-              Color(0xFF2DD4BF).withValues(alpha: 0.05),
+              Color(0xFF40E0D0).withValues(alpha: 0.03),
+              Color(0xFF2DD4BF).withValues(alpha: 0.01),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -87,7 +88,12 @@ class _CreateRouteState extends State<CreateRoute> {
                     gradientStartPoint: Alignment.centerLeft,
                     gradientEndPoint: Alignment.centerRight,
                     onTap: () {
-                      print("Tiklandı");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SelectStopsView(),
+                        ),
+                      );
                     },
                   ),
                 ],

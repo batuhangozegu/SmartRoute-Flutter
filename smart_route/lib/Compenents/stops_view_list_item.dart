@@ -23,13 +23,13 @@ class StopsViewListItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 16),
+        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 16),
         child: Row(
           children: [
             Checkbox(
               value: isSelected,
               onChanged: (_) => onTap(),
-              activeColor: Colors.tealAccent,
+              activeColor: Color.fromARGB(255, 26, 124, 111),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
               ),
@@ -103,6 +103,7 @@ class StopsViewListItem extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(width: 6),
           ],
         ),
       ),
