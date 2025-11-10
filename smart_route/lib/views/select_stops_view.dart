@@ -45,7 +45,7 @@ class _SelectStopsViewState extends State<SelectStopsView> {
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Colors.teal.shade400.withValues(alpha: 0.4),
+                  color: Colors.teal.shade400.withValues(alpha: 0.8),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
                     color: Colors.white.withValues(alpha: 0.3),
@@ -53,7 +53,7 @@ class _SelectStopsViewState extends State<SelectStopsView> {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.1),
+                      color: Colors.black.withValues(alpha: 0.2),
                       blurRadius: 12,
                       offset: Offset(0, 4),
                     ),

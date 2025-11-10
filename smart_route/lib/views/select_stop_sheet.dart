@@ -36,7 +36,7 @@ class _SelectStopSheetState extends State<SelectStopSheet> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.75,
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.7),
+        color: Colors.white.withValues(alpha: 0.85),
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       child: Column(

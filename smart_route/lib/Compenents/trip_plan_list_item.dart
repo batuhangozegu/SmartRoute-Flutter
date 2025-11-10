@@ -97,7 +97,7 @@ class TripPlanListItem extends StatelessWidget {
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Colors.teal.shade400.withValues(alpha: 0.5),
+                    color: Colors.teal.shade400.withValues(alpha: 0.8),
                   ),
                   child: Center(
                     child: Text(
