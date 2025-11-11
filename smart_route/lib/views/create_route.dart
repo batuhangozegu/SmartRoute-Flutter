@@ -34,7 +34,7 @@ class _CreateRouteState extends State<CreateRoute> {
         elevation: 0,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
-          icon: Icon(Icons.chevron_left),
+          icon: Icon(Icons.arrow_back),
         ),
       ),
       body: Container(

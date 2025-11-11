@@ -9,7 +9,18 @@ class TripPlanView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Gezi Planı")),
+      extendBodyBehindAppBar: true,
+      resizeToAvoidBottomInset: true,
+      appBar: AppBar(
+        title: Text("Gezi Planı"),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(Icons.arrow_back),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: ListView.builder(
